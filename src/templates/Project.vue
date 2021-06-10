@@ -27,7 +27,7 @@
           </div>
         </div>
         <g-image
-            :src="`http://localhost:1337${$page.projects.thumbnail.url}`"
+            :src="`${GRIDSOME_API_URL}${$page.projects.thumbnail.url}`"
             :alt="$page.projects.title"
             class="thumbnail"
         />
