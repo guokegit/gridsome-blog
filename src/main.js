@@ -9,6 +9,11 @@ export default function(Vue, { head }) {
   head.bodyAttrs = {
     class: settings.dark_mode ? "dark" : ""
   };
+  head.meta.push({
+    'http-equiv': "Content-Security-Policy",
+    content: "img-src http:; connect-src http:",
+  });
+
   Vue.mixin({
     data(){
       return {
