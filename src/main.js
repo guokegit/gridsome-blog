@@ -11,7 +11,7 @@ export default function(Vue, { head }) {
   };
   head.meta.push({
     'http-equiv': "Content-Security-Policy",
-    content: "img-src http:; connect-src http:",
+    content: "block-all-mixed-content 0; Upgrade-Insecure-Requests 0;",
   });
 
   Vue.mixin({
