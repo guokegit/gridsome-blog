@@ -9,10 +9,10 @@ export default function(Vue, { head }) {
   head.bodyAttrs = {
     class: settings.dark_mode ? "dark" : ""
   };
-  head.meta.push({
-    'http-equiv': "Content-Security-Policy",
-    content: "block-all-mixed-content 0; Upgrade-Insecure-Requests 0;",
-  });
+  // head.meta.push({
+  //   'http-equiv': "Content-Security-Policy",
+  //   content: "block-all-mixed-content 0; Upgrade-Insecure-Requests 0;",
+  // });
 
   Vue.mixin({
     data(){

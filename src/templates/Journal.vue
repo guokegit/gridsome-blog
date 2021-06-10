@@ -22,6 +22,10 @@
         </div>
 
         <JournalContent :content="$page.article.content" />
+        <g-image
+            :src="`${GRIDSOME_API_URL}${$page.article.imgUrl.url}`"
+            class="thumbnail"
+        />
 
       </div>
     </div>
@@ -37,6 +41,9 @@ query($id:ID!){
     date (format: "D. MMMM YYYY")
     timeToRead
     content
+    imgUrl{
+      url
+    }
   }
 }
 </page-query>
@@ -52,7 +59,7 @@ export default {
   metaInfo () {
     console.log(this.$page)
     return {
-      title: this.$page.article.title
+      title: this.$page?.article?.title
     }
   }
 }
