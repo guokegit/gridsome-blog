@@ -1,8 +1,10 @@
 {
   "rewrites": [
     {
-      "source": "https://47.243.85.19:1337/**/*.*",
-      "destination": "http://47.243.85.19:1337/**/*.*"
-    }
+      "source": "/contacts/",
+      "destination": "http://47.243.85.19:1337/contacts"
+    },
+    { "source": "/uploads/:match*", "destination": "http://47.243.85.19:1337/uploads/:match*" }
+
   ]
 }

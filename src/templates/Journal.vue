@@ -23,7 +23,7 @@
 
         <JournalContent :content="$page.article.content" />
         <g-image
-            :src="`${GRIDSOME_API_URL}${$page.article.imgUrl.url}`"
+            :src="$page.article.imgUrl.url"
             class="thumbnail"
         />
 

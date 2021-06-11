@@ -5,7 +5,9 @@ module.exports = (req, res) => {
     let target = ''
     
     // 处理代理目标地址
-    if (req.url.startsWith('https://47.243.85.19:1337/')) {
+    if (req.url.startsWith('/uploads')) {
+        target = 'http://47.243.85.19:1337/'
+    } else if (req.url.startsWith('/contacts')) {
         target = 'http://47.243.85.19:1337/'
     }
     
